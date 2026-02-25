@@ -68,9 +68,12 @@ program
     showWelcomeBanner();
   });
 
+const jwtGroup = new Command("jwt").description("JWT Management & Signing");
+jwtGroup.addCommand(jwtCmd.name("sign"));
+
 program.addCommand(passwordCmd);
 program.addCommand(youtubeCmd);
-program.addCommand(jwtCmd);
+program.addCommand(jwtGroup);
 program.addCommand(hashCmd);
 program.addCommand(utilsCmd);
 
