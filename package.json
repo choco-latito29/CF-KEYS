@@ -1,6 +1,6 @@
 {
   "name": "cf-keys",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Suite global de generación de claves y credenciales",
   "main": "dist/lib.js",
   "types": "dist/lib.d.ts",
