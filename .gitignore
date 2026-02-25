@@ -1,0 +1,15 @@
+# Dependencias
+node_modules/
+
+# Compilación
+dist/
+*.tsbuildinfo
+
+# Archivos de Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales o de datos
+*.log
+.env

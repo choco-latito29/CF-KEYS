@@ -1,0 +1,37 @@
+{
+  "name": "cf-keys",
+  "version": "1.0.9",
+  "description": "Suite global de generación de claves y credenciales",
+  "main": "dist/lib.js",
+  "types": "dist/lib.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "postinstall": "cf-keys welcome"
+  },
+  "keywords": [
+    "security",
+    "cloudflare",
+    "jwt",
+    "youtube-token",
+    "systems-engineering"
+  ],
+  "author": "",
+  "license": "MIT",
+  "module": "CommonJS",
+  "bin": {
+    "cf-keys": "dist/index.js"
+  },
+  "dependencies": {
+    "boxen": "^5.1.2",
+    "chalk": "^4.1.2",
+    "commander": "^14.0.3",
+    "jsonwebtoken": "^9.0.3",
+    "youtube-po-token-generator": "^0.6.0"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.3.0",
+    "typescript": "^5.9.3"
+  }
+}
