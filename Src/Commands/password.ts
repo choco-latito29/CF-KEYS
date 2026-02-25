@@ -22,30 +22,40 @@ export const generateSecurePassword = (
   return password;
 };
 
+/**
+ * CLI Command definition for password generation.
+ * Supports: cf-keys password [length] OR cf-keys password -l [length]
+ */
 export const passwordCmd = new Command("password")
   .description("Generates a cryptographically secure password")
-  .option("-l, --length <numero>", "Password length", "16")
+  .argument("[length]", "Password length (default: 16)")
+  .option("-l, --length <number>", "Password length (alternative option)")
   .option("--no-symbols", "Exclude special characters")
   .option("--no-numbers", "Exclude numbers")
-  .action((options) => {
+  .action((argLength, options) => {
     try {
-      const length = parseInt(options.length, 10);
+      const rawLength = argLength || options.length || "16";
+      const length = parseInt(rawLength, 10);
 
-      const password = generateSecurePassword(
-        length,
-        options.numbers,
-        options.symbols,
-      );
+      if (isNaN(length) || length <= 0) {
+        throw new Error("Invalid length. Please provide a positive number.");
+      }
+
+      const useNumbers = options.numbers !== false;
+      const useSymbols = options.symbols !== false;
+
+      const password = generateSecurePassword(length, useNumbers, useSymbols);
 
       console.info(
         JSON.stringify(
           {
+            status: "success",
             type: "password",
             value: password,
             length: length,
             config: {
-              symbols: options.symbols,
-              numbers: options.numbers,
+              symbols: useSymbols,
+              numbers: useNumbers,
             },
           },
           null,
@@ -54,7 +64,15 @@ export const passwordCmd = new Command("password")
       );
     } catch (error: any) {
       console.error(
-        JSON.stringify({ status: "error", details: error.message }, null, 2),
+        JSON.stringify(
+          {
+            status: "error",
+            message: "Failed to generate password",
+            details: error.message,
+          },
+          null,
+          2,
+        ),
       );
     }
   });
