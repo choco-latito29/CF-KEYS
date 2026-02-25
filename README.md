@@ -80,17 +80,23 @@ npm install cf-keys
 
 After global installation, you can access the suite using the `cf-keys` command. If run without arguments, it displays a professional dashboard with the status and version.
 
-### Common Commands & Examples:
+### ⚡ CLI Usage
 
-| Command    | Description               | Example                         |
-| ---------- | ------------------------- | ------------------------------- |
-| `jwt sign` | Interactive JWT signing   | `cf-keys jwt sign`              |
-| `password` | Generate a secure string  | `cf-keys password 32`           |
-| `youtube`  | Get YouTube bypass tokens | `cf-keys youtube`               |
-| `hash`     | Calculate file/text hash  | `cf-keys hash -a sha256 MyData` |
-| `utils`    | Base64/URL Encoding       | `cf-keys utils encode "hello"`  |
+After global installation, you can access the suite using the `cf-keys` command. If run without arguments, it displays a professional dashboard.
 
-**Pro Tip:** Use `cf-keys --help` to see all available flags and options for each module.
+| Command    | Description                               | Example                         |
+| ---------- | ----------------------------------------- | ------------------------------- |
+| `jwt sign` | **Interactive** or flag-based JWT signing | `cf-keys jwt sign`              |
+| `password` | Generate secure string (accepts length)   | `cf-keys password 32`           |
+| `youtube`  | Get YouTube `poToken` & `visitorData`     | `cf-keys youtube`               |
+| `hash`     | Calculate file/text integrity (SHA/MD5)   | `cf-keys hash -a sha256 MyData` |
+| `utils`    | Instant Base64/URL Encoding & Decoding    | `cf-keys utils encode "hello"`  |
+
+#### 💡 Pro Tips:
+
+- **Interactive JWT**: Running `cf-keys jwt sign` without flags triggers a guided wizard to safely collect your payload and secret key.
+- **Direct Arguments**: The `password` command now supports direct numeric values for faster credential generation.
+- **Help Menu**: Use `cf-keys --help` to explore all available flags and options for each specific module.
 
 ---
 
