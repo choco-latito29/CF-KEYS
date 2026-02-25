@@ -4,7 +4,7 @@
 
 # `cf-keys`
 
-**Security & Utility Suite for Systems Engineering** <i>Modular toolkit for security, credential generation, and token automation in Node.js.</i>
+**Security & Utility Suite for Systems Engineering** <i>Modular toolkit for security, credential generation, and token automation in Node.js</i>
 
 <br/>
 
