@@ -14,8 +14,7 @@
   "homepage": "https://github.com/choco-latito29/CF-KEYS#readme",
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build",
-    "postinstall": "node dist/index.js welcome"
+    "prepublishOnly": "npm run build"
   },
   "files": [
     "dist"
