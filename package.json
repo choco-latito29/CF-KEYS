@@ -4,6 +4,14 @@
   "description": "Suite global de generación de claves y credenciales",
   "main": "dist/lib.js",
   "types": "dist/lib.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choco-latito29/CF-KEYS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/choco-latito29/CF-KEYS/issues"
+  },
+  "homepage": "https://github.com/choco-latito29/CF-KEYS#readme",
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build",
@@ -14,9 +22,11 @@
     "cloudflare",
     "jwt",
     "youtube-token",
-    "systems-engineering"
+    "systems-engineering",
+    "cli",
+    "automation"
   ],
-  "author": "",
+  "author": "𝒞𝒽𝑜𝒸𝑜",
   "license": "MIT",
   "module": "CommonJS",
   "bin": {

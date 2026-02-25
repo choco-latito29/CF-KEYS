@@ -13,10 +13,20 @@
   </p>
 
 <p align="center">
-  <img src="https://img.shields.io/npm/v/cf-keys?style=for-the-badge&logo=npm&logoColor=white" />
-  <img src="https://img.shields.io/badge/license-MIT-22c55e?style=for-the-badge&logo=open-source-initiative&logoColor=white" />
-  <img src="https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <a href="https://www.npmjs.com/package/cf-keys">
+    <img src="https://img.shields.io/npm/v/cf-keys?style=for-the-badge&logo=npm&logoColor=white" alt="npm version" />
+  </a>
+  <a href="https://www.npmjs.com/package/cf-keys">
+    <img src="https://img.shields.io/npm/dt/cf-keys?style=for-the-badge&logo=npm&logoColor=white" alt="npm downloads" />
+  </a>
+  <a href="https://github.com/choco-latito29/CF-KEYS/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/choco-latito29/CF-KEYS?style=for-the-badge&logo=github&logoColor=white" alt="license" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
 </p>
 
   <p align="center">
@@ -105,11 +115,3 @@ async function setupBot() {
 ## 📄 Licencia
 
 Este proyecto está bajo la **Licencia MIT**. Esto significa que puedes usarlo libremente en tus proyectos personales o comerciales siempre que mantengas la atribución original.
-
----
-
-<div align="center">
-
-<a href="https://www.google.com/search?q=https://chocofactory.dev"><strong>Visitar ChocoFactory.dev</strong></a>
-
-</div>
