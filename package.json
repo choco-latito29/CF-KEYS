@@ -15,8 +15,11 @@
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build",
-    "postinstall": "cf-keys welcome"
+    "postinstall": "node dist/index.js welcome"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "security",
     "cloudflare",
@@ -28,7 +31,7 @@
   ],
   "author": "𝒞𝒽𝑜𝒸𝑜",
   "license": "MIT",
-  "module": "CommonJS",
+  "type": "commonjs",
   "bin": {
     "cf-keys": "dist/index.js"
   },

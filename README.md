@@ -1,117 +1,141 @@
 <div align="center">
-  <br />
- <p align="center">
-  <img src="https://raw.githubusercontent.com/choco-latito29/choco-latito29/main/Assets/cf-keys.png" width="150" alt="cf-keys-logo">
-</p>
-  
-  <h1><code>cf-keys</code></h1>
-  
-  <p align="center">
-    <strong>Security & Utility Suite for Systems Engineering</strong>
-    <br />
-    <i>Una navaja suiza modular para la gestión de credenciales, seguridad JWT y automatización de tokens.</i>
-  </p>
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/cf-keys">
-    <img src="https://img.shields.io/npm/v/cf-keys?style=for-the-badge&logo=npm&logoColor=white" alt="npm version" />
-  </a>
-  <a href="https://www.npmjs.com/package/cf-keys">
-    <img src="https://img.shields.io/npm/dt/cf-keys?style=for-the-badge&logo=npm&logoColor=white" alt="npm downloads" />
-  </a>
-  <a href="https://github.com/choco-latito29/CF-KEYS/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/choco-latito29/CF-KEYS?style=for-the-badge&logo=github&logoColor=white" alt="license" />
-  </a>
-</p>
+<img src="https://raw.githubusercontent.com/choco-latito29/choco-latito29/main/Assets/cf-keys.png" width="140" alt="cf-keys-logo" />
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-</p>
+# `cf-keys`
 
-  <p align="center">
-    <a href="#-características">Características</a> •
-    <a href="#-instalación">Instalación</a> •
-    <a href="#-uso-programático">Uso Programático</a> •
-    <a href="#-licencia">Licencia</a>
-  </p>
+**Security & Utility Suite for Systems Engineering** <i>Modular toolkit for security, credential generation, and token automation in Node.js.</i>
+
+<br/>
+
+<a href="https://www.npmjs.com/package/cf-keys">
+  <img src="https://img.shields.io/npm/v/cf-keys?style=for-the-badge&logo=npm&logoColor=white&color=007acc" />
+</a>
+
+<img src="https://img.shields.io/npm/dt/cf-keys?style=for-the-badge&logo=npm&logoColor=white&color=339933" />
+
+<a href="https://github.com/choco-latito29/CF-KEYS/blob/main/LICENSE">
+  <img src="https://img.shields.io/github/license/choco-latito29/CF-KEYS?style=for-the-badge&logo=github&logoColor=white&color=f39c12" />
+</a>
+
+<br/>
+
+<img src="https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+
+<br/><br/>
+
+<a href="#-features">Features</a> •
+<a href="#-installation">Installation</a> •
+<a href="#-cli-usage">CLI Usage</a> •
+<a href="#-sdk-usage">SDK Usage</a> •
+<a href="#-tech-stack">Tech Stack</a> •
+<a href="#-license">License</a>
+
 </div>
 
-<hr />
+---
 
-## ✨ Características Principales
+## ✨ Features
 
-<table width="100%">
-  <tr>
-    <td width="50%" style="border: none; vertical-align: top;">
-      <h3>🔐 Módulos de Seguridad</h3>
-      <ul>
-        <li><strong>JWT Engine:</strong> Firma tokens con algoritmos industriales para bots y dashboards.</li>
-        <li><strong>Secure Passwords:</strong> Generación aleatoria con alta entropía mediante <code>node:crypto</code>.</li>
-        <li><strong>Hash Integrity:</strong> Verificación de archivos vía MD5, SHA-256 y SHA-512.</li>
-      </ul>
-    </td>
-    <td width="50%" style="border: none; vertical-align: top;">
-      <h3>🛠️ Utilidades de Infraestructura</h3>
-      <ul>
-        <li><strong>YouTube Auth:</strong> Extracción automática de <code>poToken</code> y <code>visitorData</code> para bots de música.</li>
-        <li><strong>Data Utils:</strong> Encoding y Decoding instantáneo para Base64 y URL.</li>
-        <li><strong>Hybrid Architecture:</strong> Funciona como comando CLI global y como SDK para Node.js.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+### 🔐 Security Modules
 
-## 🚀 Instalación
+- **JWT Engine** → Sign and verify JWT tokens for bots, APIs, and dashboards.
+- **Secure Passwords** → Generate cryptographically secure passwords using `node:crypto`.
+- **Hash Integrity** → Calculate and verify MD5, SHA-256, and SHA-512 hashes for data integrity.
 
-### Uso Global (Terminal)
+---
 
-Ideal para tareas rápidas de administración de servidores o cualquier parte del mundo:
+### 🛠️ Infrastructure Utilities
+
+- **YouTube Auth** → Automated retrieval of `poToken` and `visitorData` for specialized integrations.
+- **Data Utils** → Instant encoding and decoding for Base64 and URL formats.
+- **Hybrid Architecture** → Seamlessly works as a global CLI and a programmatic SDK.
+
+---
+
+## 🚀 Installation
+
+### Global Usage (CLI)
+
+Best for automation, sysadmin tasks, and quick terminal operations:
 
 ```bash
 npm install -g cf-keys --foreground-scripts
 
 ```
 
-### Como Dependencia (Bots/Backend)
+### As a Dependency (SDK)
 
-Instala `cf-keys` en tus proyectos de **Discord.js**:
+For integration into your own projects (bots, servers, etc.):
 
 ```bash
 npm install cf-keys
 
 ```
 
-## 💻 Uso Programático (SDK)
+---
 
-Gracias a su arquitectura de entrada dual, puedes importar la lógica pura directamente en tu código de **TypeScript** o **JavaScript**:
+## ⚡ CLI Usage
 
-```typescript
+After global installation, you can access the suite using the `cf-keys` command. If run without arguments, it displays a professional dashboard with the status and version.
+
+### Common Commands & Examples:
+
+| Command    | Description               | Example                         |
+| ---------- | ------------------------- | ------------------------------- |
+| `jwt sign` | Interactive JWT signing   | `cf-keys jwt sign`              |
+| `password` | Generate a secure string  | `cf-keys password 32`           |
+| `youtube`  | Get YouTube bypass tokens | `cf-keys youtube`               |
+| `hash`     | Calculate file/text hash  | `cf-keys hash -a sha256 MyData` |
+| `utils`    | Base64/URL Encoding       | `cf-keys utils encode "hello"`  |
+
+**Pro Tip:** Use `cf-keys --help` to see all available flags and options for each module.
+
+---
+
+## 💻 SDK Usage (Programmatic)
+
+Import the logic directly into your **TypeScript** or **JavaScript** projects:
+
+```ts
 import { signJWT, getYoutubeTokens, generateSecurePassword } from "cf-keys";
 
-async function setupBot() {
-  // Generar tokens para bypass de YouTube
+async function setup() {
+  // Automate YouTube token retrieval
   const tokens = await getYoutubeTokens();
 
-  // Firmar acceso para el dashboard de ChocoFactory.dev
-  const token = signJWT({ bot: "KiwiChan" }, "tu_secreto_secreta");
+  // Sign a new JWT for your internal services
+  const token = signJWT({ service: "dashboard" }, "your_super_secret_key");
 
-  // Generar credenciales de base de datos
-  const dbPass = generateSecurePassword(32);
+  // Generate a high-entropy 32-character password
+  const password = generateSecurePassword(32);
 
-  console.log({ tokens, token, dbPass });
+  console.log({ tokens, token, password });
 }
 ```
 
-## 🛠️ Stack Tecnológico
+---
+
+## 🛠️ Tech Stack
 
 <div align="left">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js Badge" />
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript Badge" />
-  <img src="https://img.shields.io/badge/Commander.js-FFD700?style=flat-square&logo=commanderdotjs&logoColor=black" alt="Commander.js Badge" />
-  <img src="https://img.shields.io/badge/JSONWebToken-black?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT Badge" />
+<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/Commander.js-FFD700?style=flat-square&logo=commanderdotjs&logoColor=black" />
+<img src="https://img.shields.io/badge/JSONWebToken-black?style=flat-square&logo=jsonwebtokens&logoColor=white" />
 </div>
 
-## 📄 Licencia
+---
 
-Este proyecto está bajo la **Licencia MIT**. Esto significa que puedes usarlo libremente en tus proyectos personales o comerciales siempre que mantengas la atribución original.
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+You are free to use it in personal or commercial projects as long as proper attribution is maintained.
+
+---
+
+<div align="center">
+<sub>Built with ⚡ by Choco</sub>
+</div>
